@@ -1,0 +1,44 @@
+  const int buttonPin = 2;
+  const int gLED1 = 11;
+ const int gLED2= 6;
+ const int gLED3= 5;
+ const int gLED4= 3;
+  
+  int buttonState = 0;
+
+void setup() {
+  pinMode(gLED1,OUTPUT);
+  pinMode(gLED2, OUTPUT);
+  pinMode (gLED3, OUTPUT);
+  pinMode (gLED4, OUTPUT);
+  pinMode(buttonPin, INPUT);// put your setup code here, to run once:
+
+}
+
+void loop() {
+  
+  buttonState = digitalRead(buttonPin);
+  delay(10);
+  
+  if (buttonState == HIGH) {
+  digitalWrite(gLED1, HIGH);
+  delay(1000);
+
+digitalWrite(gLED2, HIGH);
+  delay(1000);
+
+ digitalWrite(gLED3, HIGH);
+  delay(1000);
+
+  digitalWrite(gLED4, HIGH);
+  delay(1000);
+  
+  } 
+  
+  else {
+  digitalWrite(gLED1, LOW);
+  digitalWrite(gLED2, LOW);
+  digitalWrite(gLED3, LOW);
+  digitalWrite(gLED4, LOW);
+  }
+}
